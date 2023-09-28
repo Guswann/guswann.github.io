@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,700&display=swap');
+
+:root {
+    --primary: #9CDE9F;
+    --secondary: #FFF;
+    --black: #141414;
+    --border: .1rem solid rgba(0, 0, 0, .1);
+    --border-hover: .1rem solid var(--black);
+    --box-shadow: 0 .5rem;
+    --harga: #312c2c;
+}
+
+* {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    background-color: #9CDE9F;
+    color: #fff;
+    margin: 0;
+}
+
+/* Navbar */
+
+/* Navbar */
+
+.iniheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 11.9%;
+    padding: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.iniheader::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(45px);
+    z-index: -1;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #9CDE9F;
+}
+
+.navbarbiasa a {
+    position: relative;
+    font-size: 1.15rem;
+    color: #fff;
+    margin-left: 1.8rem;
+    font-weight: 500;
+    transition: .3s ease;
+    padding: 0 10px;
+}
+
+.navbarbiasa a::after {
+    content: "";
+    position: absolute;
+    background-color: #9CDE9F;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    transition: .6s ease;
+}
+
+.navbarbiasa a:hover::after {
+    width: 100%;
+}
+
+.icons {
+    position: absolute;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    right: 5%;
+}
+
+#check {
+    display: none;
+}
+
+
+
+/* barang */
+
+.sproduct {
+    margin: 110px 200px;
+    display: flex;
+    font-size: 1rem;
+}
+
+.left-box {
+    width: 75%;
+    border: var(--border);
+    border-radius: 10px;
+    height: 100%;
+}
+
+.main-image-box {
+    padding: 30px 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main-image {
+    height: 390px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.details-box {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.details-box h2 {
+    color: var(--harga);
+}
+
+.details-box p {
+    color: var(--black);
+}
+
+.inputs {
+    width: 100%;
+    justify-content: space-between;
+}
+
+td input {
+    height: 30px;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 14px;
+    cursor: pointer;
+    transition: .2s;
+    z-index: 10000;
+}
+
+button:hover {
+    background-color: #bbbbbb;
+}
+
+/* Tombol Borrow */
+
+
+.borrow {
+    display: none;
+    border: var(--border);
+}
+
+.borrow ul {
+    left: 50%;
+    top: 50%;
+    font-size: 15px;
+}
+
+.borrow form {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    line-height: 10px;
+}
+
+
+.borrow form label {
+    color: var(--harga);
+}
+
+.borrow form input,
+.borrow form select{
+    border-radius: 5px;
+}
+
+.buy {
+    display: none;
+    border: var(--border);
+}
+
+.buy form {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+
+.buy form label {
+    color: var(--harga);
+}
+
+.buy form input,
+.buy form select,
+.buy form textarea{
+    border-radius: 5px;
+}
+
+.buy form select {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.buy form #c {
+    width: 300px;
+    height: 150px;
+    text-align: left;
+}
+
+#postcard {
+    text-align: center;
+    justify-content: center;
+    border: none;
+}
+
+/* footer */
+footer {
+    background-color: var(--secondary);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    bottom: 0;
+}
+
+footer .social {
+    padding: 1rem 0;
+}
+
+footer .social a {
+    color: var(--harga);
+    margin: 1rem;
+}
+
+footer .social a:hover {
+    color: var(--primary);
+}
+
+footer .links a {
+    color: var(--harga);
+    padding: .7rem 1rem;
+}
+
+footer .links a:hover {
+    color: var(--primary);
+}
+
+footer .credit {
+    color: #F71735;
+}
+
+
+
+/* media queries */
+
+/* Laptop */
+
+@media (max-width: 1366px) {
+    .iniheader {
+        padding: 1.3rem 5%;
+    }
+
+    html {
+        font-size: 80%;
+    }
+
+
+
+}
+
+
+@media (max-width: 1024px) {
+    .sproduct {
+        flex-direction: column;
+        font-size: 1.3rem;
+    }
+
+    .left-box,
+    .details-box {
+        width: 100%;
+    }
+
+    .main-image-box {
+        width: 100%;
+    }
+}
+
+/* Tablet */
+
+@media (max-width:768px) {
+    html {
+        font-size: 64%;
+    }
+
+    .icons {
+        display: inline-block;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbarbiasa {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    #check:checked~.navbarbiasa {
+        height: 10.7rem;
+    }
+
+    .navbarbiasa a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: .5s ease;
+    }
+
+    #check:checked~.navbarbiasa a {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: calc(.15s * var(--i));
+    }
+
+    .sproduct {
+        flex-direction: column;
+    }
+
+    .left-box,
+    .details-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-image-box {
+        scale: 95%;
+    }
+
+}
+
+/* Phone */
+
+@media (max-width: 425px) {
+    html {
+        font-size: 62.4%;
+    }
+
+    .sproduct {
+        flex-direction: column;
+        max-width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .left-box,
+    .details-box {
+        width: 100%;
+        height: 75%
+    }
+}

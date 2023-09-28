@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,700&display=swap');
+
+* {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background:url(https://cdn.discordapp.com/attachments/780257802786308116/1147411613398339624/large-collection-old-books-wooden-shelves-generated-by-ai.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.formregister {
+    width: 420px;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(17px);
+    border-radius: 16px;
+    border: 2px solid rgba(161, 161, 161, 0.8);
+    padding: 30px 40px;
+}
+
+.formregister h3{
+    text-align: center;
+    font-size: 30px;
+    color: #fffdfd;
+}
+
+.formregister .inputbox {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    color: #fff;
+}
+
+.formregister .inputbox input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.3);
+    border-radius: 13px;
+    padding: 20px 45px 20px 20px;
+    color: #fff;
+}
+
+.formregister input::placeholder {
+    color: rgb(212, 212, 212);
+}
+
+.formregister .remember {
+    display: flex;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    color: #fff;
+}
+
+
+.formregister .btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.formregister .register {
+    text-align: center;
+    margin: 20px 0 15px;
+    color: #fff;
+}
+
+.register p a{
+    color: #a8a8a8;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+

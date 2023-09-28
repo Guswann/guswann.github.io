@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Product Page</title>
+  <link rel="stylesheet" href="../css/productpage.css" />
+  <!-- feathericons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- boxicon -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="iniheader" id="ininavbar">
+    <a href="../index.html" class="logo">Read<span>DaBook</span>.</a>
+
+    <input type="checkbox" id="check" />
+    <label class="icons" for="check">
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <i class="bx bx-x" id="close-icon"></i>
+    </label>
+
+    <div class="navbarbiasa" id="navbarbiasa">
+      <a href="../index.html#bagFeatured">Home</a>
+      <a href="../index.html">Featured</a>
+      <a href="../bukubuku.html">Book Lists</a>
+    </div>
+
+    <script src="../js/navbarnaik.js"></script>
+  </header>
+
+  <!-- barang -->
+
+  <section class="sproduct">
+    <div class="left-box">
+      <div class="main-image-box">
+        <img src="../gambarcoyh/atomic.png" alt="" class="main-image" />
+      </div>
+    </div>
+
+    <div class="details-box">
+      <h2>Atomic Habits</h2>
+      <p>Availabilty (In Stock)</p>
+      <h4>$6.99</h4>
+
+      <table cellspacing="10" class="inputs">
+        <tr>
+          <td>Quantity</td>
+          <td align="right">
+            <input type="number" id="first" style="text-align: center" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Sub Total <span>$</span></td>
+          <td align="right">
+            <input id="second" type="number" style="text-align: center" />
+          </td>
+        </tr>
+      </table>
+
+      <h4>Book Details</h4>
+      <p>
+        Small Changes That Give Extraordinary Results is a self-improvement category book by James Clear. On
+        In general, small changes often seem meaningless because they do not immediately bring about change
+        real in human life.
+      </p>
+
+      <button id="buy-btn"><a href="#buy">Buy</a></button>
+      <button id="borrow-btn"><a href="#borrow">Borrow</a></button>
+    </div>
+
+    <script type="text/javascript">
+      function cart() {
+        var a, b, c, d;
+        a = document.getElementById("first").value;
+        b = a * 5.99;
+        document.getElementById("second").value = b;
+      }
+      let ans = document.getElementById("first");
+      ans.addEventListener("keyup", cart);
+    </script>
+  </section>
+
+  <!-- buy -->
+
+  <section class="buy" id="buy">
+    <form action="">
+      <label for="a">Username </label> <br />
+      <input type="text" name="" id="a" placeholder="Username" /> <br />
+
+      <label for="b">Email</label> <br />
+      <input type="email" id="b" placeholder="Your Email" /> <br />
+
+      <label for="c">Your Address</label> <br />
+      <textarea name="" id="c" cols="30" rows="10"></textarea> <br />
+
+      <label for="d">Payment</label>
+      <select name="" id="">
+        <option value="">GoPay</option>
+        <option value="">OVO</option>
+        <option value="">Debit Cards</option>
+      </select>
+      <button type="submit"><a href="../payment-succeed.html">Submit</a></button>
+    </form>
+
+    <script>
+      function showBuy() {
+        var buyPage = document.getElementById("buy");
+
+        // Show the form for buying the book
+        buyPage.style.display = "block";
+        buyPage.style.zIndex = 1000;
+      }
+
+      document.getElementById("buy-btn").addEventListener("click", showBuy);
+    </script>
+  </section>
+
+  <!-- borrow -->
+
+  <section class="borrow" id="borrow">
+    <form>
+      <label for="Name">Name</label> <br />
+      <input id="Name" type="text" placeholder="Name" required /> <br />
+      <label for="Email">E-Mail</label> <br />
+      <input id="Email" type="text" placeholder="E-Mail" required /> <br />
+      <br />
+      <select name="How long you borrow this book" id="">
+        <option value="">How Long You Borrow This Book?</option>
+        <option value="">1 Day</option>
+        <option value="">2 Days</option>
+        <option value="">3 Days</option>
+        <option value="">4 Days</option>
+        <option value="">1 Week</option>
+      </select>
+      <br />
+
+      <label for="file">Post Identity Card</label> <br />
+      <input id="postcard" type="file" required />
+
+      <button type="submit"><a href="../payment-succeed.html">Submit</a></button>
+    </form>
+
+    <ul>
+      <h3>RULES To Borrow Book</h3>
+      <li>Ketika buku dikembalikan, buku harus dalam keadaan masih bagus.</li>
+      <li>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem,
+        debitis?
+      </li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quam
+        ducimus vel quaerat aut consectetur
+      </li>
+    </ul>
+
+    <script>
+      function showBorrow() {
+        var borrowPage = document.getElementById("borrow");
+
+        // Show the form for borrow booooooook
+        borrowPage.style.display = "block";
+        borrowPage.style.zIndex = 1000;
+      }
+
+      document.getElementById("borrow-btn").addEventListener("click", showBorrow);
+    </script>
+  </section>
+
+  <!-- footer -->
+
+  <footer class="footcontainer">
+    <div class="social">
+      <a href=""><i data-feather="instagram"></i></a>
+      <a href=""><i data-feather="twitter"></i></a>
+      <a href=""><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="#bagFeatured">Featured</a>
+      <a href="bukubuku.html">Book lists</a>
+    </div>
+
+    <div class="credit">
+      <p>Created by Pajle | &copy; 2023</p>
+    </div>
+  </footer>
+
+  <!-- featericons js -->
+  <script>
+    feather.replace();
+  </script>
+</body>
+
+</html>
