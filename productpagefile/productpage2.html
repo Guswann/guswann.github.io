@@ -116,10 +116,12 @@
       function showBuy() {
 
         var buyPage = document.getElementById("buy");
+        var borrowPage = document.getElementById("borrow");
 
         // Show the form for buying the book
         buyPage.style.display = "block";
         buyPage.style.zIndex = 1000;
+        borrowPage.style.display = "none";
       }
 
       document.getElementById("buy-btn").addEventListener("click", showBuy);
@@ -166,10 +168,12 @@
       function showBorrow() {
 
         var borrowPage = document.getElementById("borrow");
+        var buyPage = document.getElementById("buy");
 
         // Show the form for borrow booooooook
         borrowPage.style.display = "block";
         borrowPage.style.zIndex = 1000;
+        buyPage.style.display = "none";
       }
 
       document.getElementById("borrow-btn").addEventListener("click", showBorrow);
